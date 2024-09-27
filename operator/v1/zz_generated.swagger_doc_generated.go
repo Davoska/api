@@ -175,6 +175,45 @@ func (CloudCredentialStatus) SwaggerDoc() map[string]string {
 	return map_CloudCredentialStatus
 }
 
+var map_ClusterVersionOperator = map[string]string{
+	"":         "ClusterVersionOperator holds cluster-wide information about the Cluster Version Operator.\n\nCompatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).",
+	"metadata": "metadata is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"spec":     "spec is the specification of the desired behavior of the Cluster Version Operator.",
+	"status":   "status is the most recently observed status of the Cluster Version Operator.",
+}
+
+func (ClusterVersionOperator) SwaggerDoc() map[string]string {
+	return map_ClusterVersionOperator
+}
+
+var map_ClusterVersionOperatorList = map[string]string{
+	"":         "ClusterVersionOperatorList is a collection of ClusterVersionOperators.\n\nCompatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).",
+	"metadata": "metadata is the standard list's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+	"items":    "Items is a list of ClusterVersionOperators.",
+}
+
+func (ClusterVersionOperatorList) SwaggerDoc() map[string]string {
+	return map_ClusterVersionOperatorList
+}
+
+var map_ClusterVersionOperatorSpec = map[string]string{
+	"":                 "ClusterVersionOperatorSpec is the specification of the desired behavior of the Cluster Version Operator.",
+	"operatorLogLevel": "operatorLogLevel is an intent based logging for the operator itself.  It does not give fine grained control, but it is a simple way to manage coarse grained logging choices that operators have to interpret for themselves.\n\nValid values are: \"Normal\", \"Debug\", \"Trace\", \"TraceAll\". Defaults to \"Normal\".",
+}
+
+func (ClusterVersionOperatorSpec) SwaggerDoc() map[string]string {
+	return map_ClusterVersionOperatorSpec
+}
+
+var map_ClusterVersionOperatorStatus = map[string]string{
+	"":                   "ClusterVersionOperatorStatus defines the observed status of the Cluster Version Operator.",
+	"observedGeneration": "observedGeneration is the last generation change you've dealt with",
+}
+
+func (ClusterVersionOperatorStatus) SwaggerDoc() map[string]string {
+	return map_ClusterVersionOperatorStatus
+}
+
 var map_Config = map[string]string{
 	"":         "Config specifies the behavior of the config operator which is responsible for creating the initial configuration of other components on the cluster.  The operator also handles installation, migration or synchronization of cloud configurations for AWS and Azure cloud based clusters\n\nCompatibility level 1: Stable within a major release for a minimum of 12 months or 3 minor releases (whichever is longer).",
 	"metadata": "metadata is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
