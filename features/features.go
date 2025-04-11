@@ -744,7 +744,7 @@ var (
 					contactPerson("dhurta").
 					productScope(ocpSpecific).
 					enhancementPR("https://github.com/openshift/enhancements/pull/1492").
-					enableIn(configv1.DevPreviewNoUpgrade).
+					enableForClusterProfile(SelfManaged, configv1.DevPreviewNoUpgrade).
 					mustRegister()
 
 	FeatureGateGCPCustomAPIEndpoints = newFeatureGate("GCPCustomAPIEndpoints").
